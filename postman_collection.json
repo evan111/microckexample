@@ -1,0 +1,162 @@
+{
+	"info": {
+		"_postman_id": "f99d1f40-f428-4ef0-96b9-05776d52b3db",
+		"name": "Test API",
+		"description": "Description for Test API using Apicurio Studio",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "order",
+			"item": [
+				{
+					"name": "Retrieve a list of orders",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http:///order?status={{status}}&page={{page}}",
+							"host": [
+								"http:"
+							],
+							"port": "",
+							"path": [
+								"",
+								"",
+								"order"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "{{status}}"
+								},
+								{
+									"key": "page",
+									"value": "{{page}}"
+								}
+							]
+						},
+						"description": "Retrieve a list of orders"
+					},
+					"response": [
+						{
+							"name": "ordersSold Example",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://order?status=sold&page=1",
+									"host": [
+										"http:"
+									],
+									"port": "",
+									"path": [
+										"",
+										"",
+										"order"
+									],
+									"query": [
+										{
+											"key": "status",
+											"value": "sold"
+										},
+										{
+											"key": "page",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": "[\n{\n\"id\": \"orderId\",\n\"amount\": 400,\n\"devise\": \"no idea\",\n\"items:: [{\"id\": \"itemId\", \"label\": \"itemIlabel\", \"price\": 100}]\n\"status\": \"sold out\"\n}\n]"
+						}
+					]
+				},
+				{
+					"name": "Create (place) a new order",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "The order to create"
+						},
+						"url": "http:///order",
+						"description": "Create (place) a new order"
+					},
+					"response": []
+				},
+				{
+					"name": "Retrieve and existing order using its id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http:///order/:id",
+							"host": [
+								"http:"
+							],
+							"port": "",
+							"path": [
+								"",
+								"",
+								"order",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id"
+								}
+							]
+						},
+						"description": "Retrieve an existing order using its id"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete an existing order using its id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http:///order/:id",
+							"host": [
+								"http:"
+							],
+							"port": "",
+							"path": [
+								"",
+								"",
+								"order",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id"
+								}
+							]
+						},
+						"description": "Delete an existing order using its id"
+					},
+					"response": []
+				}
+			],
+			"description": "Folder for order"
+		}
+	]
+}
