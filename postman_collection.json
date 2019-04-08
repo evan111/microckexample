@@ -3,7 +3,8 @@
 		"_postman_id": "f99d1f40-f428-4ef0-96b9-05776d52b3db",
 		"name": "Test API",
 		"description": "Description for Test API using Apicurio Studio",
-		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"version": "1.0"
 	},
 	"item": [
 		{
